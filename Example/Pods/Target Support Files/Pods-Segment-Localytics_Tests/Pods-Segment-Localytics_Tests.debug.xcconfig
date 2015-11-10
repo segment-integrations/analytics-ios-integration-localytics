@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited)  "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Analytics" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/Localytics" "${PODS_ROOT}/Headers/Public/Segment-Localytics" "${PODS_ROOT}/Headers/Public/Specta"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Localytics/Localytics-iOS-3.5.1" $(inherited) "${PODS_ROOT}/Localytics/Localytics-iOS-3.5.1"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Analytics" -isystem "${PODS_ROOT}/Headers/Public/Expecta" -isystem "${PODS_ROOT}/Headers/Public/Localytics" -isystem "${PODS_ROOT}/Headers/Public/Segment-Localytics" -isystem "${PODS_ROOT}/Headers/Public/Specta"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Analytics" -l"Expecta" -l"Localytics" -l"Segment-Localytics" -l"Specta" -l"sqlite3" -l"z" -framework "Foundation" -framework "SystemConfiguration" -framework "XCTest" -weak_framework "AdSupport"
+PODS_ROOT = ${SRCROOT}/Pods
