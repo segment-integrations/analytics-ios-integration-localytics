@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Segment-Localytics"
-  s.version          = "3.5.1-alpha"
+  s.version          = "1.0.0-alpha"
   s.summary          = "Localytics Integration for Segment's analytics-ios library."
 
   s.description      = <<-DESC
