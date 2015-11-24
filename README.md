@@ -1,8 +1,8 @@
 # Analytics
 
 [![CI Status](http://img.shields.io/travis/segment-integrations/analytics-ios-integration-localytics.svg?style=flat)](https://travis-ci.org/segment-integrations/analytics-ios-integration-localytics)
-[![Version](https://img.shields.io/cocoapods/v/Segment-Localyics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localyics)
-[![License](https://img.shields.io/cocoapods/l/Segment-Localyics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localyics)
+[![Version](https://img.shields.io/cocoapods/v/Segment-Localytics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localytics)
+[![License](https://img.shields.io/cocoapods/l/Segment-Localytics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localytics)
 
 Localytics integration for analytics-ios.
 
@@ -12,7 +12,7 @@ Analytics is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your `Podfile`:
 
 ```ruby
-pod "Segment-Localyics"
+pod "Segment-Localytics"
 ```
 
 ## License
