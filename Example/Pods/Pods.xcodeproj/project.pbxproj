@@ -232,7 +232,6 @@
 		1961B4D8CB7538334EB42BA07920D761 /* EXPMatchers+match.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+match.h"; path = "Expecta/Matchers/EXPMatchers+match.h"; sourceTree = "<group>"; };
 		1B6522F787C7A9993036F476742EDADA /* EXPMatchers+beGreaterThanOrEqualTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThanOrEqualTo.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThanOrEqualTo.m"; sourceTree = "<group>"; };
 		1DE5B31D51D0774B3E074F5AC3F0CE50 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
-		1E7EDA0ED1819EFB9793BEE491659DA9 /* libLocalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libLocalytics.a; path = "Localytics-iOS-3.5.1/libLocalytics.a"; sourceTree = "<group>"; };
 		279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2D003342FA99259746513EC6739CFCC6 /* SEGAnalyticsUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGAnalyticsUtils.h; path = Pod/Classes/Internal/SEGAnalyticsUtils.h; sourceTree = "<group>"; };
 		2D463236233341F9536FE852A9FFECF3 /* SEGBluetooth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGBluetooth.h; path = Pod/Classes/Internal/SEGBluetooth.h; sourceTree = "<group>"; };
@@ -324,7 +323,6 @@
 		B81D68F9FC572B611EA567101FC24556 /* Analytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Analytics-dummy.m"; sourceTree = "<group>"; };
 		B90B6F185AECBB86A756D2E0F416BE82 /* SEGLocalyticsIntegration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SEGLocalyticsIntegration.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB9B79E7BDDC21A9AD6BDC1D534DCDC4 /* Localytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Localytics.h; path = "Localytics-iOS-3.5.1/Localytics.h"; sourceTree = "<group>"; };
 		BC8C811E689936BF401EB4C86AED9909 /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
 		BCDB438A95F73C5A774EACCD716B0CC9 /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
 		BD4277812293012CF52917884A0A9750 /* Pods-Segment-Localytics_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Segment-Localytics_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -352,6 +350,7 @@
 		DEF1ECC5EF5C455A88C7460480991EDA /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
 		DF44363A3AB1144802CDC454BF69F19F /* Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Specta.h; path = Specta/Specta/Specta.h; sourceTree = "<group>"; };
 		DFF9F21419FF740BE922E9FB352C0B26 /* SEGReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEGReachability.h; path = Pod/Classes/Internal/SEGReachability.h; sourceTree = "<group>"; };
+		E162811E0AC60807B9ECC6DFE8A41115 /* libLocalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libLocalytics.a; path = "Localytics-iOS-3.6.1/libLocalytics.a"; sourceTree = "<group>"; };
 		E29D359D253F2BFE8683C28874F0D248 /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beFalsy.h"; path = "Expecta/Matchers/EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
 		E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E505C3B82E0A2B7FF8F36397085A4B12 /* EXPMatchers+raise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "Expecta/Matchers/EXPMatchers+raise.h"; sourceTree = "<group>"; };
@@ -372,6 +371,7 @@
 		F4D91805ADFC76907D319C9C2AE1B290 /* Pods-Segment-Localytics_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Segment-Localytics_Tests-resources.sh"; sourceTree = "<group>"; };
 		F84E03F79B3D09A0B2C6B3A358EFE5BE /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
 		F890F63F86327352E0ACE7514D5939B2 /* XCTestCase+Specta.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Specta.m"; path = "Specta/Specta/XCTestCase+Specta.m"; sourceTree = "<group>"; };
+		F8F3CE2879CEDEF0860F02CCD6619E13 /* Localytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Localytics.h; path = "Localytics-iOS-3.6.1/Localytics.h"; sourceTree = "<group>"; };
 		FB54DB7F8393753883D7B9FEB15E823E /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
 		FC65B99A6BB95AA23683E0E8D5FB4641 /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		FCFCF87BAAAE4EFFFA152ADAD36B7638 /* Segment-Localytics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Segment-Localytics-dummy.m"; sourceTree = "<group>"; };
@@ -506,13 +506,12 @@
 			path = "../Target Support Files/Specta";
 			sourceTree = "<group>";
 		};
-		5ADCE26CC1870022EF2976249A381AA2 /* Localytics */ = {
+		5B6B959EF43DE9676BF00712AD6462B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB9B79E7BDDC21A9AD6BDC1D534DCDC4 /* Localytics.h */,
-				7DE7388AABEDCC2C2A86CD133CA0C7AE /* Frameworks */,
+				E162811E0AC60807B9ECC6DFE8A41115 /* libLocalytics.a */,
 			);
-			path = Localytics;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		63555DD3C15472FC386576FF527FEBA9 /* Support Files */ = {
@@ -564,6 +563,15 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		77E880AC489BB1ED95BD99E96D1029CC /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				F8F3CE2879CEDEF0860F02CCD6619E13 /* Localytics.h */,
+				5B6B959EF43DE9676BF00712AD6462B6 /* Frameworks */,
+			);
+			path = Localytics;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -576,20 +584,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		7DE7388AABEDCC2C2A86CD133CA0C7AE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1E7EDA0ED1819EFB9793BEE491659DA9 /* libLocalytics.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8027CE4B626116DFE01E7D28D4CBBF6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7575061863609F4FFDF913EBFE00CED6 /* Analytics */,
 				D3DBE53A9AE40B489017C6C93C2AC8BC /* Expecta */,
-				5ADCE26CC1870022EF2976249A381AA2 /* Localytics */,
+				77E880AC489BB1ED95BD99E96D1029CC /* Localytics */,
 				F6BB79BD76F117B8D394FD45DAB9311F /* Specta */,
 			);
 			name = Pods;
