@@ -122,10 +122,14 @@
     [Localytics tagScreen:payload.name];
 }
 
-- (void)registerForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-                                              options:(NSDictionary *)options
+- (void)registeredForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     [Localytics setPushToken:deviceToken];
+}
+
+- (void)receivedRemoteNotification:(NSDictionary *)userInfo
+{
+    [Localytics handlePushNotificationOpened:userInfo];
 }
 
 - (void)flush
