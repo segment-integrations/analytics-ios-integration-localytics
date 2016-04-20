@@ -1,5 +1,5 @@
 PODS:
-  - Analytics (3.0.6)
+  - Analytics (3.0.7)
   - Expecta (1.0.5)
   - Localytics (3.6.1)
   - Segment-Localytics (1.0.0):
@@ -14,10 +14,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Segment-Localytics:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Analytics: 2f17182f18a7feda7210e25a49c1a4134c582c31
+  Analytics: b342fb4f43fa4f97ca6f4358b44d3295217ba294
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Localytics: 6f365959f1012ebeb0db88fe7dd06b4ff433b18d
   Segment-Localytics: 71c9af95ebadc0d3c409607e52c7391371c3df51
