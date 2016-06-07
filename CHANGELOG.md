@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+Version 1.0.2 *(7th June, 2016)*
+-------------------------------------------
+*(Supports analytics-ios 3.0 - < 4.0)*
+
 Version 1.0.1 *(11th May, 2016)*
 -------------------------------------------
 *(Supports Localytics 3.8+)*
