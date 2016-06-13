@@ -13,7 +13,6 @@
 #import "SEGBluetooth.h"
 #import "SEGReachability.h"
 #import "SEGLocation.h"
-#import "NSData+GZIP.h"
 #import <iAd/iAd.h>
 
 NSString *const SEGSegmentDidSendRequestNotification = @"SegmentDidSendRequest";
@@ -107,17 +106,6 @@ static BOOL GetAdTrackingEnabled()
     return self;
 }
 
-/*
- * There is an iOS bug that causes instances of the CTTelephonyNetworkInfo class to
- * sometimes get notifications after they have been deallocated.
- * Instead of instantiating, using, and releasing instances you * must instead retain
- * and never release them to work around the bug.
- *
- * Ref: http://stackoverflow.com/questions/14238586/coretelephony-crash
- */
-
-static CTTelephonyNetworkInfo* _telephonyNetworkInfo;
-
 - (NSDictionary *)staticContext
 {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -159,13 +147,8 @@ static CTTelephonyNetworkInfo* _telephonyNetworkInfo;
         @"name" : device.systemName,
         @"version" : device.systemVersion
     };
-    
-    static dispatch_once_t networkInfoOnceToken;
-    dispatch_once(&networkInfoOnceToken, ^{
-        _telephonyNetworkInfo = [[CTTelephonyNetworkInfo alloc] init];
-    });
 
-    CTCarrier *carrier = [_telephonyNetworkInfo subscriberCellularProvider];
+    CTCarrier *carrier = [[[CTTelephonyNetworkInfo alloc] init] subscriberCellularProvider];
     if (carrier.carrierName.length)
         dict[@"network"] = @{ @"carrier" : carrier.carrierName };
 
@@ -433,7 +416,7 @@ static CTTelephonyNetworkInfo* _telephonyNetworkInfo;
         [self.queue addObjectsFromArray:payloadArray];
         [[self.queue copy] writeToURL:[self queueURL] atomically:YES];
         [self flushQueueByLength];
-
+        
     }
     @catch (NSException *exception) {
         SEGLog(@"%@ Error writing payload: %@", self, exception);
@@ -527,10 +510,9 @@ static CTTelephonyNetworkInfo* _telephonyNetworkInfo;
 {
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:self.apiURL];
     [urlRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
-    [urlRequest setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [urlRequest setHTTPMethod:@"POST"];
-    [urlRequest setHTTPBody:[data gzippedData]];
+    [urlRequest setHTTPBody:data];
 
     SEGLog(@"%@ Sending batch API request.", self);
     self.request = [SEGAnalyticsRequest startWithURLRequest:urlRequest

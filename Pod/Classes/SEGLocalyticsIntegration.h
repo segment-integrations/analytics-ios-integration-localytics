@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <Analytics/SEGIntegration.h>
+#import <Localytics/Localytics.h>
 
 @interface SEGLocalyticsIntegration : NSObject<SEGIntegration>
 

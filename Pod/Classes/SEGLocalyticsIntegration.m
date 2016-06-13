@@ -1,5 +1,4 @@
 #import "SEGLocalyticsIntegration.h"
-#import <Localytics/Localytics.h>
 #import <Analytics/SEGAnalyticsUtils.h>
 
 @implementation SEGLocalyticsIntegration
@@ -12,13 +11,16 @@
         self.settings = settings;
         
         NSString *appKey = [settings objectForKey:@"appKey"];
-        [Localytics integrate:appKey];
-        
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
+        NSDictionary *localyticsOptions;
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {
-            [Localytics setSessionTimeoutInterval:[sessionTimeoutInterval floatValue]];
+             [localyticsOptions setValue:sessionTimeoutInterval forKey:@"session_timeout"];
+        } else {
+             [localyticsOptions setValue:@30 forKey:@"session_timeout"];
         }
+        
+        [Localytics autoIntegrate:appKey launchOptions:localyticsOptions];
     }
     return self;
 }
@@ -129,7 +131,7 @@
 
 - (void)receivedRemoteNotification:(NSDictionary *)userInfo
 {
-    [Localytics handlePushNotificationOpened:userInfo];
+    [Localytics handleNotification:userInfo];
 }
 
 - (void)flush
