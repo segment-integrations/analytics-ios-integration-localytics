@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '285E642F2382C8D39A2FC0C5'
+               BlueprintIdentifier = 'ECBBD466CBF6BF8E44DB969E'
                BlueprintName = 'Segment-Localytics'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSegment-Localytics.a'>
+               BuildableName = 'Segment_Localytics.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

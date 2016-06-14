@@ -1,0 +1,6 @@
+framework module Segment_Localytics {
+  umbrella header "Segment-Localytics-umbrella.h"
+
+  export *
+  module * { export * }
+}

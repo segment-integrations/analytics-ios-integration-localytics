@@ -17,8 +17,8 @@
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {
-            [Localytics setSessionTimeoutInterval:[sessionTimeoutInterval floatValue]];
-        }
+            [Localytics setOptions:@{@"session_timeout":sessionTimeoutInterval}];
+        } else { [Localytics setOptions:@{@"session_timeout": @30}]; };
     }
     return self;
 }
@@ -129,7 +129,7 @@
 
 - (void)receivedRemoteNotification:(NSDictionary *)userInfo
 {
-    [Localytics handlePushNotificationOpened:userInfo];
+    [Localytics handleNotification:userInfo];
 }
 
 - (void)flush
