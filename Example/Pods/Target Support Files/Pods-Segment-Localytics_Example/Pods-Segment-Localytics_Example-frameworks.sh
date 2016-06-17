@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Segment-Localytics_Example/Analytics.framework"
+  install_framework "${PODS_ROOT}/Localytics/Localytics-iOS-4.0.0/Localytics.framework"
+  install_framework "Pods-Segment-Localytics_Example/Segment_Localytics.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Segment-Localytics_Example/Analytics.framework"
+  install_framework "${PODS_ROOT}/Localytics/Localytics-iOS-4.0.0/Localytics.framework"
+  install_framework "Pods-Segment-Localytics_Example/Segment_Localytics.framework"
+fi

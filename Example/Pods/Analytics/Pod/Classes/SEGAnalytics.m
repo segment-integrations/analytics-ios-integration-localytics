@@ -9,6 +9,7 @@
 #import "SEGIntegration.h"
 #import "SEGSegmentIntegrationFactory.h"
 #import "UIViewController+SEGScreen.h"
+#import "SEGStoreKitTracker.h"
 #import <objc/runtime.h>
 
 static SEGAnalytics *__sharedInstance = nil;
@@ -75,6 +76,7 @@ NSString *SEGAnalyticsIntegrationDidStart = @"io.segment.analytics.integration.d
 @property (nonatomic, strong) NSMutableDictionary *integrations;
 @property (nonatomic, strong) NSMutableDictionary *registeredIntegrations;
 @property (nonatomic) volatile BOOL initialized;
+@property (nonatomic, strong) SEGStoreKitTracker *storeKitTracker;
 
 @end
 
@@ -105,10 +107,6 @@ NSString *SEGAnalyticsIntegrationDidStart = @"io.segment.analytics.integration.d
         self.registeredIntegrations = [NSMutableDictionary dictionaryWithCapacity:self.factories.count];
         self.configuration = configuration;
 
-        if (configuration.recordScreenViews) {
-            [UIViewController seg_swizzleViewDidAppear];
-        }
-
         // Update settings on each integration immediately
         [self refreshSettings];
 
@@ -128,6 +126,12 @@ NSString *SEGAnalyticsIntegrationDidStart = @"io.segment.analytics.integration.d
             [nc addObserver:self selector:@selector(handleAppStateNotification:) name:name object:nil];
         }
 
+        if (configuration.recordScreenViews) {
+            [UIViewController seg_swizzleViewDidAppear];
+        }
+        if (configuration.trackInAppPurchases) {
+            _storeKitTracker = [SEGStoreKitTracker trackTransactionsForAnalytics:self];
+        }
         [self trackApplicationLifecycleEvents:configuration.trackApplicationLifecycleEvents];
     }
     return self;
@@ -153,8 +157,8 @@ NSString *const SEGBuildKey = @"SEGBuildKey";
     NSString *previousVersion = [[NSUserDefaults standardUserDefaults] stringForKey:SEGVersionKey];
     NSInteger previousBuild = [[NSUserDefaults standardUserDefaults] integerForKey:SEGBuildKey];
 
-    NSString *currentVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
-    NSInteger currentBuild = [[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] integerValue];
+    NSString *currentVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
+    NSInteger currentBuild = [[[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"] integerValue];
 
     if (!previousBuild) {
         [self track:@"Application Installed" properties:@{
@@ -478,7 +482,7 @@ NSString *const SEGBuildKey = @"SEGBuildKey";
 
 + (NSString *)version
 {
-    return @"3.2.2";
+    return @"3.2.4";
 }
 
 #pragma mark - Private

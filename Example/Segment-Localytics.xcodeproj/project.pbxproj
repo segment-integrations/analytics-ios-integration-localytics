@@ -21,8 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		C9A16AE0788E117CEBCB8AE4 /* libPods-Segment-Localytics_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB093E27411374A3195BB701 /* libPods-Segment-Localytics_Example.a */; };
-		D21362A554B5A3FA3414BA32 /* libPods-Segment-Localytics_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3F090BD72B4FF023CB2607 /* libPods-Segment-Localytics_Tests.a */; };
+		891B469ABD28C21375334A53 /* Pods_Segment_Localytics_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3B1F8ADE61012CD7ED6D2D /* Pods_Segment_Localytics_Tests.framework */; };
+		A1CF0DF70B256554CD4BE2E7 /* Pods_Segment_Localytics_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AE142444B9FAB28A34E624 /* Pods_Segment_Localytics_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		63970E20BBB27C93FFC1A124 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		91AE142444B9FAB28A34E624 /* Pods_Segment_Localytics_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Segment_Localytics_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD00AE919B32F045503E9A7 /* Segment-Localytics.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Segment-Localytics.podspec"; path = "../Segment-Localytics.podspec"; sourceTree = "<group>"; };
 		ACCCA2B216599B0730A1E94F /* Pods-Segment-Localytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B308092E499A26128E225D03 /* Pods-Segment-Localytics_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D401428BF30873BD0A74E500 /* Pods-Segment-Localytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		FB093E27411374A3195BB701 /* libPods-Segment-Localytics_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD3F090BD72B4FF023CB2607 /* libPods-Segment-Localytics_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3B1F8ADE61012CD7ED6D2D /* Pods_Segment_Localytics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Segment_Localytics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				C9A16AE0788E117CEBCB8AE4 /* libPods-Segment-Localytics_Example.a in Frameworks */,
+				A1CF0DF70B256554CD4BE2E7 /* Pods_Segment_Localytics_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				D21362A554B5A3FA3414BA32 /* libPods-Segment-Localytics_Tests.a in Frameworks */,
+				891B469ABD28C21375334A53 /* Pods_Segment_Localytics_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				FB093E27411374A3195BB701 /* libPods-Segment-Localytics_Example.a */,
-				FD3F090BD72B4FF023CB2607 /* libPods-Segment-Localytics_Tests.a */,
+				91AE142444B9FAB28A34E624 /* Pods_Segment_Localytics_Example.framework */,
+				DA3B1F8ADE61012CD7ED6D2D /* Pods_Segment_Localytics_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Segment-Localytics_Tests" */;
 			buildPhases = (
 				0F786742DC21350C1F36737C /* Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AC195388D20070C39A /* Resources */,
 				A4551D76934810604DB4FD04 /* Embed Pods Frameworks */,
 				1C014B0701972030806ACFA9 /* Copy Pods Resources */,
@@ -543,7 +543,6 @@
 			baseConfigurationReference = ACCCA2B216599B0730A1E94F /* Pods-Segment-Localytics_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -562,7 +561,6 @@
 			baseConfigurationReference = D401428BF30873BD0A74E500 /* Pods-Segment-Localytics_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
