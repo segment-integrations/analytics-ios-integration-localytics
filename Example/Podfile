@@ -1,12 +1,10 @@
-source 'https://github.com/CocoaPods/Specs.git'
+target 'Segment-Localytics_Example' do
+  pod 'Segment-Localytics', :path => '../'
 
-target 'Segment-Localytics_Example', :exclusive => true do
-  pod "Segment-Localytics", :path => "../"
-end
+  target 'Segment-Localytics_Tests' do
+    inherit! :search_paths
 
-target 'Segment-Localytics_Tests', :exclusive => true do
-  pod "Segment-Localytics", :path => "../"
-
-  pod 'Specta'
-  pod 'Expecta'
+    pod 'Specta'
+    pod 'Expecta'
+  end
 end
