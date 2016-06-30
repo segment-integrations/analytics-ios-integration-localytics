@@ -3,10 +3,10 @@
 
 @implementation SEGLocalyticsIntegrationFactory
 
-+ (id)instance
++ (instancetype)instance
 {
     static dispatch_once_t once;
-    static SEGLocalyticsIntegration *sharedInstance;
+    static SEGLocalyticsIntegrationFactory *sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
     });
