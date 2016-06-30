@@ -2,7 +2,7 @@ PODS:
   - Analytics (3.2.4)
   - Expecta (1.0.5)
   - Localytics (4.0.0)
-  - Segment-Localytics (1.0.2):
+  - Segment-Localytics (1.0.3):
     - Analytics (~> 3.0)
     - Localytics (~> 4.0)
   - Specta (1.0.5)
@@ -20,7 +20,9 @@ SPEC CHECKSUMS:
   Analytics: d801f32615853ca3108216423dbaa829c74f5927
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Localytics: 205a563a2761b5d844e8bba522d3c1da6cf4bc5b
-  Segment-Localytics: c69764780f240185fe8ea336dad1506b633c6ab6
+  Segment-Localytics: 2ecf2617fb6f22d451075d66b1bfda9c44c003f7
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 7c4e8146b728c1eab3694042b0421d868d6cbba7
+
+COCOAPODS: 1.0.1
