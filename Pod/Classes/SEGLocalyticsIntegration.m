@@ -65,7 +65,6 @@
         attributeScope = LLProfileScopeApplication;
     }
     
-    
     // Other traits. Iterate over all the traits and set them.
     for (NSString *key in payload.traits) {
         NSString *traitValue =
