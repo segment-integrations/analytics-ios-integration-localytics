@@ -14,6 +14,8 @@
         NSString *appKey = [settings objectForKey:@"appKey"];
         [Localytics integrate:appKey];
         
+        [Localytics setLoggingEnabled:YES];
+        
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {
@@ -55,13 +57,22 @@
     
     [self setCustomDimensions:payload.traits];
     
+    // Allow users to specify whether attributes should be Org or Application Scoped.
+    NSInteger attributeScope;
+    if ([self.settings objectForKey:@"organizationScope"]) {
+        attributeScope = LLProfileScopeOrganization;
+    } else {
+        attributeScope = LLProfileScopeApplication;
+    }
+    
+    
     // Other traits. Iterate over all the traits and set them.
     for (NSString *key in payload.traits) {
         NSString *traitValue =
         [NSString stringWithFormat:@"%@", [payload.traits objectForKey:key]];
         [Localytics setValue:traitValue
                    forProfileAttribute:key
-                             withScope:LLProfileScopeApplication];
+                             withScope:attributeScope];
     }
 }
 
