@@ -14,8 +14,6 @@
         NSString *appKey = [settings objectForKey:@"appKey"];
         [Localytics integrate:appKey];
         
-        [Localytics setLoggingEnabled:YES];
-        
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {
@@ -59,7 +57,7 @@
     
     // Allow users to specify whether attributes should be Org or Application Scoped.
     NSInteger attributeScope;
-    if ([self.settings objectForKey:@"organizationScope"]) {
+    if ([self setOrganizationScope]) {
         attributeScope = LLProfileScopeOrganization;
     } else {
         attributeScope = LLProfileScopeApplication;
@@ -140,6 +138,11 @@
 - (void)receivedRemoteNotification:(NSDictionary *)userInfo
 {
     [Localytics handleNotification:userInfo];
+}
+
+- (BOOL)setOrganizationScope
+{
+    return [(NSNumber *)[self.settings objectForKey:@"setOrganizationScope"] boolValue];
 }
 
 - (void)flush
