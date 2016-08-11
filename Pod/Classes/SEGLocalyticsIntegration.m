@@ -55,13 +55,21 @@
     
     [self setCustomDimensions:payload.traits];
     
+    // Allow users to specify whether attributes should be Org or Application Scoped.
+    NSInteger attributeScope;
+    if ([self setOrganizationScope]) {
+        attributeScope = LLProfileScopeOrganization;
+    } else {
+        attributeScope = LLProfileScopeApplication;
+    }
+    
     // Other traits. Iterate over all the traits and set them.
     for (NSString *key in payload.traits) {
         NSString *traitValue =
         [NSString stringWithFormat:@"%@", [payload.traits objectForKey:key]];
         [Localytics setValue:traitValue
                    forProfileAttribute:key
-                             withScope:LLProfileScopeApplication];
+                             withScope:attributeScope];
     }
 }
 
@@ -130,6 +138,11 @@
 - (void)receivedRemoteNotification:(NSDictionary *)userInfo
 {
     [Localytics handleNotification:userInfo];
+}
+
+- (BOOL)setOrganizationScope
+{
+    return [(NSNumber *)[self.settings objectForKey:@"setOrganizationScope"] boolValue];
 }
 
 - (void)flush
