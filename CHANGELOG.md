@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.0.4 *(17th August, 2016)*
+-------------------------------------------
+*(Supports Localytics 4.0)*
+
+Adds support for changing `profileScope` of user Attributes
+
 Version 1.0.3 *(23rd June, 2016)*
 -------------------------------------------
 *(Supports Localytics 4.0)*

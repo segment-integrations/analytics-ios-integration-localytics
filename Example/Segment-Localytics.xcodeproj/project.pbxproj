@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9E1A861D58AA6900EA2013 /* Localytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A841D58AA0600EA2013 /* Localytics.framework */; };
+		5C9E1A881D58AA9400EA2013 /* Localytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A871D58AA9400EA2013 /* Localytics.framework */; };
+		5C9E1A891D58AA9400EA2013 /* Localytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A871D58AA9400EA2013 /* Localytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -35,9 +38,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5C9E1A8A1D58AA9400EA2013 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5C9E1A891D58AA9400EA2013 /* Localytics.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		21E4B12D652AD30FF16F23E6 /* Pods-Segment-Localytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		40DDFBAC33B19BB1D16E0F12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5C9E1A841D58AA0600EA2013 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Pods/Localytics/Localytics-iOS-4.0.0/Localytics.framework"; sourceTree = "<group>"; };
+		5C9E1A871D58AA9400EA2013 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Pods/Localytics/Localytics-iOS-4.0.0/Localytics.framework"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Segment-Localytics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Segment-Localytics_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,7 +92,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				5C9E1A861D58AA6900EA2013 /* Localytics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				5C9E1A881D58AA9400EA2013 /* Localytics.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				70CA2D8753AB163AD7F85D92 /* libPods-Segment-Localytics_Example.a in Frameworks */,
 			);
@@ -96,6 +117,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				5C9E1A871D58AA9400EA2013 /* Localytics.framework */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for Segment-Localytics */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -117,6 +139,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C9E1A841D58AA0600EA2013 /* Localytics.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -206,6 +229,7 @@
 				6003F588195388D20070C39A /* Resources */,
 				C64E3CFE812D13032B48C7D0 /* [CP] Embed Pods Frameworks */,
 				0F3F1CCE19B30FA0BEF8522F /* [CP] Copy Pods Resources */,
+				5C9E1A8A1D58AA9400EA2013 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,10 +536,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Localytics/Localytics-iOS-4.0.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Segment-Localytics/Segment-Localytics-Prefix.pch";
 				INFOPLIST_FILE = "Segment-Localytics/Segment-Localytics-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -528,10 +557,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Localytics/Localytics-iOS-4.0.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Segment-Localytics/Segment-Localytics-Prefix.pch";
 				INFOPLIST_FILE = "Segment-Localytics/Segment-Localytics-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

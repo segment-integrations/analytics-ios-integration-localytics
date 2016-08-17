@@ -7,6 +7,7 @@
 //
 
 #import "SEGViewController.h"
+#import "SEGAnalytics.h"
 
 @interface SEGViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[SEGAnalytics sharedAnalytics]identify:@"123" traits:@{@"dog": @"fido"}];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
