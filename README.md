@@ -8,7 +8,7 @@ Localytics integration for analytics-ios.
 
 ## Installation
 
-To install the Segment-Mixpanel integration, simply add this line to your [CocoaPods](http://cocoapods.org) `Podfile`:
+To install the Segment-Localytics integration, simply add this line to your [CocoaPods](http://cocoapods.org) `Podfile`:
 
 ```ruby
 pod "Segment-Localytics"
@@ -16,7 +16,7 @@ pod "Segment-Localytics"
 
 ## Usage
 
-After adding the dependency, you must register the integration with our SDK.  To do this, import the Mixpanel integration in your `AppDelegate`:
+After adding the dependency, you must register the integration with our SDK.  To do this, import the Localytics integration in your `AppDelegate`:
 
 ```
 #import <Segment-Localytics/SEGLocalyticsIntegrationFactory.h>
