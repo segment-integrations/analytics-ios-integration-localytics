@@ -40,17 +40,37 @@
 {
     if (payload.userId) {
         [Localytics setCustomerId:payload.userId];
+        SEGLog(@"[Localytics setCustomerId:payload.userId];", payload.userId);
     }
     
     NSString *email = [payload.traits objectForKey:@"email"];
     if (email) {
         [Localytics setValue:email forIdentifier:@"email"];
+        SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
+        
+        [Localytics setCustomerEmail:email];
+        SEGLog(@"[Localytics setCustomerEmail:email];", email);
     }
     
     NSString *name = [payload.traits objectForKey:@"name"];
-    // TODO support first name, last name?
     if (name) {
         [Localytics setValue:name forIdentifier:@"customer_name"];
+        SEGLog(@"[Localytics setValue:%@ forIdentifier:@'customer_name']", name);
+        
+        [Localytics setCustomerFullName:name];
+        SEGLog(@"[Localytics setCustomerFullName:%@];", name);
+    }
+    
+    NSString *firstName = [payload.traits objectForKey:@"first_name"];
+    if (firstName) {
+        [Localytics setCustomerFirstName:firstName];
+        SEGLog(@"[Localytics setCustomerFirstName:%@];", firstName);
+    }
+    
+    NSString *lastName = [payload.traits objectForKey:@"last_name"];
+    if (lastName) {
+        [Localytics setCustomerLastName:lastName];
+        SEGLog(@"[Localytics setCustomerLastName:lastName];", lastName);
     }
     
     [self setCustomDimensions:payload.traits];
