@@ -40,7 +40,7 @@
 {
     if (payload.userId) {
         [Localytics setCustomerId:payload.userId];
-        SEGLog(@"[Localytics setCustomerId:payload.userId];", payload.userId);
+        SEGLog(@"[Localytics setCustomerId:%@];", payload.userId);
     }
     
     NSString *email = [payload.traits objectForKey:@"email"];
@@ -49,7 +49,7 @@
         SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
         
         [Localytics setCustomerEmail:email];
-        SEGLog(@"[Localytics setCustomerEmail:email];", email);
+        SEGLog(@"[Localytics setCustomerEmail:%@];", email);
     }
     
     NSString *name = [payload.traits objectForKey:@"name"];
@@ -70,7 +70,7 @@
     NSString *lastName = [payload.traits objectForKey:@"last_name"];
     if (lastName) {
         [Localytics setCustomerLastName:lastName];
-        SEGLog(@"[Localytics setCustomerLastName:lastName];", lastName);
+        SEGLog(@"[Localytics setCustomerLastName:%@];", lastName);
     }
     
     [self setCustomDimensions:payload.traits];
