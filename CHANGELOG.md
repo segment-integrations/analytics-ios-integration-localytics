@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.2.0 *(30th August, 2017)*
+-------------------------------------------
+*(Supports Localytics 4.0)*
+
+ * [New](https://github.com/segment-integrations/analytics-ios-integration-localytics/pull/19): Maps to Localytics Org level reserved traits $first_name, $last_name, $email, and $full_name.  
+
 Version 1.0.4 *(17th August, 2016)*
 -------------------------------------------
 *(Supports Localytics 4.0)*
