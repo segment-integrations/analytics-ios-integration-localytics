@@ -45,8 +45,8 @@
     
     NSString *email = [payload.traits objectForKey:@"email"];
     if (email) {
-        [Localytics setValue:email forIdentifier:@"email"];
-        SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
+        [Localytics setValue:email forIdentifier:@"$email"];
+        SEGLog(@"[Localytics setValue:%@ forIdentifier:@'$email']", email);
         
         [Localytics setCustomerEmail:email];
         SEGLog(@"[Localytics setCustomerEmail:%@];", email);
