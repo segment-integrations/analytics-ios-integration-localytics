@@ -1,6 +1,5 @@
 # Analytics
 
-[![CI Status](http://img.shields.io/travis/segment-integrations/analytics-ios-integration-localytics.svg?style=flat)](https://travis-ci.org/segment-integrations/analytics-ios-integration-localytics)
 [![Version](https://img.shields.io/cocoapods/v/Segment-Localytics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localytics)
 [![License](https://img.shields.io/cocoapods/l/Segment-Localytics.svg?style=flat)](http://cocoapods.org/pods/Segment-Localytics)
 
