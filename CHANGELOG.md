@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.3.0 *(27th February, 2018)*
+-------------------------------------------
+*(Supports Localytics 5.0+)*
+
+ * [Update](https://github.com/segment-integrations/analytics-ios-integration-localytics/pull/24):The one change here is that when configuring the `appKey`, the Localytics `integrate` method takes an additional argument to add flexibility on when/how to upload user data. Localytics will default to uploading data periodically based on the state of a user's network connection. The default behavior occurs when passing `nil` to `withLocalyticsOptions`. [Relevant Docs](https://docs.localytics.com/dev/ios.html#initialize-sdk-ios).
+
 Version 1.2.0 *(30th August, 2017)*
 -------------------------------------------
 *(Supports Localytics 4.0)*
