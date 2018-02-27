@@ -12,8 +12,8 @@
         self.settings = settings;
         
         NSString *appKey = [settings objectForKey:@"appKey"];
-        [Localytics integrate:appKey];
-        
+        // Setting withLocalyticsOptions to nil will set Localytics defaults
+        [Localytics integrate:appKey withLocalyticsOptions:nil];
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {

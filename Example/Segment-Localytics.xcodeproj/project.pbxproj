@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C9E1A861D58AA6900EA2013 /* Localytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A841D58AA0600EA2013 /* Localytics.framework */; };
-		5C9E1A881D58AA9400EA2013 /* Localytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A871D58AA9400EA2013 /* Localytics.framework */; };
-		5C9E1A891D58AA9400EA2013 /* Localytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9E1A871D58AA9400EA2013 /* Localytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -18,14 +15,13 @@
 		6003F59E195388D20070C39A /* SEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* SEGAppDelegate.m */; };
 		6003F5A7195388D20070C39A /* SEGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* SEGViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		70CA2D8753AB163AD7F85D92 /* libPods-Segment-Localytics_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E299CDA5E0E9038DC406078 /* libPods-Segment-Localytics_Example.a */; };
-		8392786294EB0A72B2BD540A /* libPods-Segment-Localytics_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C06AB271EF82C4310471F8 /* libPods-Segment-Localytics_Tests.a */; };
+		61294A8728EC6470A7022519 /* libPods-Segment-Localytics_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C122E50AAFDA2D913DD7C6D /* libPods-Segment-Localytics_Tests.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B9B68C304E0A9BDCD44E11BF /* libPods-Segment-Localytics_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38E872F2D2010AA76D8F86 /* libPods-Segment-Localytics_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5C9E1A891D58AA9400EA2013 /* Localytics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,10 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C122E50AAFDA2D913DD7C6D /* libPods-Segment-Localytics_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E4B12D652AD30FF16F23E6 /* Pods-Segment-Localytics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		40DDFBAC33B19BB1D16E0F12 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5C9E1A841D58AA0600EA2013 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Pods/Localytics/Localytics-iOS-4.0.0/Localytics.framework"; sourceTree = "<group>"; };
-		5C9E1A871D58AA9400EA2013 /* Localytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localytics.framework; path = "Pods/Localytics/Localytics-iOS-4.0.0/Localytics.framework"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Segment-Localytics_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Segment-Localytics_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,19 +65,17 @@
 		6003F5A6195388D20070C39A /* SEGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEGViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* Segment-Localytics_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Segment-Localytics_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		63970E20BBB27C93FFC1A124 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6E299CDA5E0E9038DC406078 /* libPods-Segment-Localytics_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8A38E872F2D2010AA76D8F86 /* libPods-Segment-Localytics_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD00AE919B32F045503E9A7 /* Segment-Localytics.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Segment-Localytics.podspec"; path = "../Segment-Localytics.podspec"; sourceTree = "<group>"; };
 		CD25F64FCCA6E18142176056 /* Pods-Segment-Localytics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8ECFC97679C57D849098D38 /* Pods-Segment-Localytics_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E20838ABEA1576A6730EFA3F /* Pods-Segment-Localytics_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Segment-Localytics_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F3C06AB271EF82C4310471F8 /* libPods-Segment-Localytics_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Segment-Localytics_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +84,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
-				5C9E1A861D58AA6900EA2013 /* Localytics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
-				5C9E1A881D58AA9400EA2013 /* Localytics.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				70CA2D8753AB163AD7F85D92 /* libPods-Segment-Localytics_Example.a in Frameworks */,
+				B9B68C304E0A9BDCD44E11BF /* libPods-Segment-Localytics_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				8392786294EB0A72B2BD540A /* libPods-Segment-Localytics_Tests.a in Frameworks */,
+				61294A8728EC6470A7022519 /* libPods-Segment-Localytics_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +106,6 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				5C9E1A871D58AA9400EA2013 /* Localytics.framework */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for Segment-Localytics */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -139,13 +127,11 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C9E1A841D58AA0600EA2013 /* Localytics.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
-				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6E299CDA5E0E9038DC406078 /* libPods-Segment-Localytics_Example.a */,
-				F3C06AB271EF82C4310471F8 /* libPods-Segment-Localytics_Tests.a */,
+				8A38E872F2D2010AA76D8F86 /* libPods-Segment-Localytics_Example.a */,
+				1C122E50AAFDA2D913DD7C6D /* libPods-Segment-Localytics_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -353,13 +339,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Segment-Localytics_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9397663B5C1C7B0D0C76BBCF /* [CP] Copy Pods Resources */ = {
@@ -383,13 +372,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Segment-Localytics_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C64E3CFE812D13032B48C7D0 /* [CP] Embed Pods Frameworks */ = {
@@ -398,9 +390,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh",
+				"${PODS_ROOT}/Localytics/Localytics-iOS-5.0.0/Localytics.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localytics.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
