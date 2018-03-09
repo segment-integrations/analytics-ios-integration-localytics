@@ -11,14 +11,16 @@
     if (self = [super init]) {
         self.settings = settings;
         
+      dispatch_async(dispatch_get_main_queue(), ^{
         NSString *appKey = [settings objectForKey:@"appKey"];
         // Setting withLocalyticsOptions to nil will set Localytics defaults
         [Localytics integrate:appKey withLocalyticsOptions:nil];
         NSNumber *sessionTimeoutInterval = [settings objectForKey:@"sessionTimeoutInterval"];
         if (sessionTimeoutInterval != nil &&
             [sessionTimeoutInterval floatValue] > 0) {
-            [Localytics setOptions:@{@"session_timeout":sessionTimeoutInterval}];
+          [Localytics setOptions:@{@"session_timeout":sessionTimeoutInterval}];
         } else { [Localytics setOptions:@{@"session_timeout": @30}]; };
+      });
     }
     return self;
 }
@@ -190,12 +192,7 @@
     [Localytics closeSession];
     [Localytics upload];
 }
-- (void)applicationWillResignActive
-{
-    [Localytics dismissCurrentInAppMessage];
-    [Localytics closeSession];
-    [Localytics upload];
-}
+
 - (void)applicationDidBecomeActive
 {
     [Localytics openSession];
