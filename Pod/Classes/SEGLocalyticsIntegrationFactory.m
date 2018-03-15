@@ -1,6 +1,7 @@
 #import "SEGLocalyticsIntegrationFactory.h"
 #import "SEGLocalyticsIntegration.h"
 
+
 @implementation SEGLocalyticsIntegrationFactory
 
 + (instancetype)instance
