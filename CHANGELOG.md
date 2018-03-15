@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+Version 1.4.0 *(15th March, 2018)*
+-------------------------------------------
+*(Supports Localytics 5.0+)*
+
+ * [Fix](https://github.com/segment-integrations/analytics-ios-integration-localytics/pull/27): Initialize Localytics on main thread. Removes Localytics session-related code in `applicationWillResignActive`. [Relevant Docs](https://docs.localytics.com/dev/ios.html#handling-data-protection-ios).
+
+
 Version 1.3.0 *(27th February, 2018)*
 -------------------------------------------
 *(Supports Localytics 5.0+)*
