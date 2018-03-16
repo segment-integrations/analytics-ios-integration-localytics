@@ -59,6 +59,7 @@
 
     NSString *email = [payload.traits objectForKey:@"email"];
     if (email) {
+        // Avoid calling this on the main thread
         [Localytics setValue:email forIdentifier:@"email"];
         SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
 
@@ -139,7 +140,14 @@
     BOOL isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
         UIApplicationStateActive;
     if (isBackgrounded) {
-        [Localytics openSession];
+        // It is recommended that this call be placed in applicationDidBecomeActive
+        if ([NSThread isMainThread]) {
+            [Localytics openSession];
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [Localytics openSession];
+            });
+        }
     }
 
     NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
