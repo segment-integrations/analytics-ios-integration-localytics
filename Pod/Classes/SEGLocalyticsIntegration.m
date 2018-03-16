@@ -59,7 +59,7 @@
 
     NSString *email = [payload.traits objectForKey:@"email"];
     if (email) {
-        // Avoid calling this on the main thread
+        // Localytics documents to avoid calling this on the main thread. While we dispatch other methods onto the main thread, this must not be dispatched. Analytics-ios calls `identify` on a background thread, but if that changes in the future, we may have to change this as well
         [Localytics setValue:email forIdentifier:@"email"];
         SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
 
