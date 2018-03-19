@@ -11,14 +11,9 @@
 {
     if (self = [super init]) {
         self.settings = settings;
-
-        if ([NSThread isMainThread]) {
+        [self runOnMainThread:^{
             [self initializeLocalytics:self.settings];
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self initializeLocalytics:self.settings];
-            });
-        }
+        }];
     }
     return self;
 }
@@ -138,20 +133,16 @@
 
     // Backgrounded? Restart the session to add this event.
     __block BOOL isBackgrounded = @NO;
-    dispatch_async(dispatch_get_main_queue(), ^{
+    [self runOnMainThread:^{
         isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
             UIApplicationStateActive;
-    });
+    }];
 
     if (isBackgrounded) {
         // It is recommended that this call be placed in applicationDidBecomeActive
-        if ([NSThread isMainThread]) {
+        [self runOnMainThread:^{
             [Localytics openSession];
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [Localytics openSession];
-            });
-        }
+        }];
     }
 
     NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
@@ -167,7 +158,9 @@
 
     // Backgrounded? Close the session again after the event.
     if (isBackgrounded) {
-        [Localytics closeSession];
+        [self runOnMainThread:^{
+            [Localytics closeSession];
+        }];
     }
 }
 
@@ -201,26 +194,43 @@
 - (void)applicationDidEnterBackground
 {
     [Localytics dismissCurrentInAppMessage];
-    [Localytics closeSession];
+    [self runOnMainThread:^{
+        [Localytics closeSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationWillEnterForeground
 {
-    [Localytics openSession];
+    [self runOnMainThread:^{
+        [Localytics openSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationWillTerminate
 {
-    [Localytics closeSession];
+    [self runOnMainThread:^{
+        [Localytics closeSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationDidBecomeActive
 {
-    [Localytics openSession];
+    [self runOnMainThread:^{
+        [Localytics openSession];
+    }];
     [Localytics upload];
 }
 
+#pragma Main thread check
+- (void)runOnMainThread:(void (^)(void))block
+{
+    if ([NSThread isMainThread]) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 @end
