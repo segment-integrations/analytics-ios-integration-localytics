@@ -137,8 +137,12 @@
     // TODO add support for value
 
     // Backgrounded? Restart the session to add this event.
-    BOOL isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
-        UIApplicationStateActive;
+    __block BOOL isBackgrounded = @NO;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
+            UIApplicationStateActive;
+    });
+
     if (isBackgrounded) {
         // It is recommended that this call be placed in applicationDidBecomeActive
         if ([NSThread isMainThread]) {
