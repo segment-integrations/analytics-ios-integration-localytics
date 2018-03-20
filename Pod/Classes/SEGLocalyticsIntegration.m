@@ -129,39 +129,32 @@
 
 - (void)track:(SEGTrackPayload *)payload
 {
-    // TODO add support for value
-
-    // Backgrounded? Restart the session to add this event.
-    __block BOOL isBackgrounded = @NO;
     [self runOnMainThread:^{
-        isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
-            UIApplicationStateActive;
-    }];
+        // TODO add support for value
 
-    if (isBackgrounded) {
-        // It is recommended that this call be placed in applicationDidBecomeActive
-        [self runOnMainThread:^{
+        // Backgrounded? Restart the session to add this event.
+        BOOL isBackgrounded = [[UIApplication sharedApplication] applicationState] != UIApplicationStateActive;
+        if (isBackgrounded) {
+            // It is recommended that this call be placed in applicationDidBecomeActive
             [Localytics openSession];
-        }];
-    }
+        }
 
-    NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
-    if (revenue) {
-        [Localytics tagEvent:payload.event
-                       attributes:payload.properties
-            customerValueIncrease:@([revenue intValue] * 100)];
-    } else {
-        [Localytics tagEvent:payload.event attributes:payload.properties];
-    }
+        NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
+        if (revenue) {
+            [Localytics tagEvent:payload.event
+                           attributes:payload.properties
+                customerValueIncrease:@([revenue intValue] * 100)];
+        } else {
+            [Localytics tagEvent:payload.event attributes:payload.properties];
+        }
 
-    [self setCustomDimensions:payload.properties];
+        [self setCustomDimensions:payload.properties];
 
-    // Backgrounded? Close the session again after the event.
-    if (isBackgrounded) {
-        [self runOnMainThread:^{
+        // Backgrounded? Close the session again after the event.
+        if (isBackgrounded) {
             [Localytics closeSession];
-        }];
-    }
+        }
+    }];
 }
 
 - (void)screen:(SEGScreenPayload *)payload
