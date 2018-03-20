@@ -11,14 +11,9 @@
 {
     if (self = [super init]) {
         self.settings = settings;
-
-        if ([NSThread isMainThread]) {
+        [self runOnMainThread:^{
             [self initializeLocalytics:self.settings];
-        } else {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self initializeLocalytics:self.settings];
-            });
-        }
+        }];
     }
     return self;
 }
@@ -59,6 +54,7 @@
 
     NSString *email = [payload.traits objectForKey:@"email"];
     if (email) {
+        // Localytics documents to avoid calling this on the main thread. While we dispatch other methods onto the main thread, this must not be dispatched. Analytics-ios calls `identify` on a background thread, but if that changes in the future, we may have to change this as well
         [Localytics setValue:email forIdentifier:@"email"];
         SEGLog(@"[Localytics setValue:%@ forIdentifier:@'email']", email);
 
@@ -133,30 +129,32 @@
 
 - (void)track:(SEGTrackPayload *)payload
 {
-    // TODO add support for value
+    [self runOnMainThread:^{
+        // TODO add support for value
 
-    // Backgrounded? Restart the session to add this event.
-    BOOL isBackgrounded = [[UIApplication sharedApplication] applicationState] !=
-        UIApplicationStateActive;
-    if (isBackgrounded) {
-        [Localytics openSession];
-    }
+        // Backgrounded? Restart the session to add this event.
+        BOOL isBackgrounded = [[UIApplication sharedApplication] applicationState] != UIApplicationStateActive;
+        if (isBackgrounded) {
+            // It is recommended that this call be placed in applicationDidBecomeActive
+            [Localytics openSession];
+        }
 
-    NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
-    if (revenue) {
-        [Localytics tagEvent:payload.event
-                       attributes:payload.properties
-            customerValueIncrease:@([revenue intValue] * 100)];
-    } else {
-        [Localytics tagEvent:payload.event attributes:payload.properties];
-    }
+        NSNumber *revenue = [SEGLocalyticsIntegration extractRevenue:payload.properties withKey:@"revenue"];
+        if (revenue) {
+            [Localytics tagEvent:payload.event
+                           attributes:payload.properties
+                customerValueIncrease:@([revenue intValue] * 100)];
+        } else {
+            [Localytics tagEvent:payload.event attributes:payload.properties];
+        }
 
-    [self setCustomDimensions:payload.properties];
+        [self setCustomDimensions:payload.properties];
 
-    // Backgrounded? Close the session again after the event.
-    if (isBackgrounded) {
-        [Localytics closeSession];
-    }
+        // Backgrounded? Close the session again after the event.
+        if (isBackgrounded) {
+            [Localytics closeSession];
+        }
+    }];
 }
 
 - (void)screen:(SEGScreenPayload *)payload
@@ -189,26 +187,43 @@
 - (void)applicationDidEnterBackground
 {
     [Localytics dismissCurrentInAppMessage];
-    [Localytics closeSession];
+    [self runOnMainThread:^{
+        [Localytics closeSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationWillEnterForeground
 {
-    [Localytics openSession];
+    [self runOnMainThread:^{
+        [Localytics openSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationWillTerminate
 {
-    [Localytics closeSession];
+    [self runOnMainThread:^{
+        [Localytics closeSession];
+    }];
     [Localytics upload];
 }
 
 - (void)applicationDidBecomeActive
 {
-    [Localytics openSession];
+    [self runOnMainThread:^{
+        [Localytics openSession];
+    }];
     [Localytics upload];
 }
 
+#pragma Main thread check
+- (void)runOnMainThread:(void (^)(void))block
+{
+    if ([NSThread isMainThread]) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
 @end
