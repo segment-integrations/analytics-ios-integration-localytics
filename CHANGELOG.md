@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+Version 1.5.0 *(20th March, 2018)*
+-------------------------------------------
+*(Supports Localytics 5.0+)*
+
+ * [Fix](https://github.com/segment-integrations/analytics-ios-integration-localytics/pull/28): Initialize all `track` calls to Localytics on main thread.
+
+
 Version 1.4.0 *(15th March, 2018)*
 -------------------------------------------
 *(Supports Localytics 5.0+)*
