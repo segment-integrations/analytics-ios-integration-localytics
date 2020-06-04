@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Segment-Localytics"
-  s.version          = "1.5.0"
+  s.version          = "1.5.1"
   s.summary          = "Localytics Integration for Segment's analytics-ios library."
 
   s.description      = <<-DESC
@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 
-  s.dependency 'Analytics', '~> 3.0'
+  s.dependency 'Analytics'
   s.dependency 'Localytics', '~> 5.0'
 end
