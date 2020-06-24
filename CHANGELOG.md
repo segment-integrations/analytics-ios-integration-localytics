@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.5.1 *(4th June, 2020)*
+-------------------------------------------
+*(Supports Localytics 5.0+)*
+
+ * Relaxes Segment Analytics library dependency.
+
 Version 1.5.0 *(20th March, 2018)*
 -------------------------------------------
 *(Supports Localytics 5.0+)*
