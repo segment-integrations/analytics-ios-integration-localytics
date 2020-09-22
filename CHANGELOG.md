@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+Version 1.5.2 *(22nd September, 2020)
+-------------------------------------------
+* Unpins Localytics version in podspec.
+
 Version 1.5.1 *(4th June, 2020)*
 -------------------------------------------
 *(Supports Localytics 5.0+)*

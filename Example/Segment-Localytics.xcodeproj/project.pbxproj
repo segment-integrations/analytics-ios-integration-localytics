@@ -214,7 +214,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				C64E3CFE812D13032B48C7D0 /* [CP] Embed Pods Frameworks */,
-				0F3F1CCE19B30FA0BEF8522F /* [CP] Copy Pods Resources */,
 				5C9E1A8A1D58AA9400EA2013 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -234,8 +233,6 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AC195388D20070C39A /* Resources */,
-				0BCCB3572FE7CBBDA788AC7C /* [CP] Embed Pods Frameworks */,
-				9397663B5C1C7B0D0C76BBCF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,36 +300,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BCCB3572FE7CBBDA788AC7C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F3F1CCE19B30FA0BEF8522F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1E1C6E0022B1AFD32FE35EF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,21 +316,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9397663B5C1C7B0D0C76BBCF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Tests/Pods-Segment-Localytics_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A930F0CBD32663A23C67B32A /* [CP] Check Pods Manifest.lock */ = {
@@ -390,8 +342,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh",
-				"${PODS_ROOT}/Localytics/Localytics-iOS-5.0.0/Localytics.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh",
+				"${PODS_ROOT}/Localytics/Localytics-iOS-6.1.0/Localytics.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -399,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
