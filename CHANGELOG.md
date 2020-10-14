@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+Version 1.5.3 *(14th October, 2020)*
+-------------------------------------------
+
+ * Update SEGAnalytics import to support new namespacing introduced in `analytics-ios` v4.x
+
 Version 1.5.2 *(22nd September, 2020)
 -------------------------------------------
 * Unpins Localytics version in podspec.
