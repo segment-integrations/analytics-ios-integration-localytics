@@ -349,7 +349,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Segment-Localytics_Example/Pods-Segment-Localytics_Example-frameworks.sh",
-				"${PODS_ROOT}/Localytics/Localytics-iOS-6.1.0/Localytics.framework",
+				"${PODS_ROOT}/Localytics/Localytics-iOS-6.2.1/Localytics.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
