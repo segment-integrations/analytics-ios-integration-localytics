@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/segment-integrations/analytics-ios-integration-localytics.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/segment'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
 
-  s.dependency 'Analytics'
-  s.dependency 'Localytics'
+  s.dependency 'Analytics', '~> 4.1.5'
+  s.dependency 'Localytics', '~> 6.2.1'
 end
